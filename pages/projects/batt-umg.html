@@ -2,11 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Batt UMG | House of Shafaq</title>
+  <title>Batt UMG | VNYL</title>
   <link rel="stylesheet" href="../../styles/main.css" />
 </head>
 <body>
-  <nav class="nav" id="main-nav"><a href="../../index.html" class="nav-logo">HOS<span>*</span></a><ul class="nav-links"><li><a href="../../index.html">Home</a></li><li><a href="../projects.html" class="active">Projects</a></li><li><a href="../about.html">About</a></li><li><a href="../services.html">Services</a></li><li><a href="https://airtable.com/appAfWnobPze99cGi/shr5vTMzfOt1LfdZs" target="_blank" class="nav-cta">Let's Talk</a></li></ul><div class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></div></nav>
+
+  <!-- LOADING SCREEN -->
+  <div class="loader">
+    <div class="loader-logo">VNYL</div>
+  </div>
+
+  <!-- FILM GRAIN OVERLAY -->
+  <div class="film-grain"></div>
+
+  <!-- CURSOR GLOW -->
+  <div class="cursor-glow"></div>
+
+  <nav class="nav" id="main-nav"><a href="../../index.html" class="nav-logo">VNYL</a><ul class="nav-links"><li><a href="../../index.html">Home</a></li><li><a href="../projects.html" class="active">Projects</a></li><li><a href="../about.html">About</a></li><li><a href="../services.html">Services</a></li><li><a href="https://airtable.com/appAfWnobPze99cGi/shr5vTMzfOt1LfdZs" target="_blank" class="nav-cta">Let's Talk</a></li></ul><div class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></div></nav>
   <div class="mobile-nav" id="mobile-nav"><a href="../../index.html">Home</a><a href="../projects.html">Projects</a><a href="../about.html">About</a><a href="../services.html">Services</a></div>
   <section class="project-detail">
     <a href="../projects.html" class="project-back"><svg viewBox="0 0 24 24" stroke-width="2"><polyline points="15,18 9,12 15,6"/></svg>All Projects</a>
@@ -14,8 +26,24 @@
       <div><p style="font-size:0.7rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:0.8rem;" class="reveal">Mid-Level Ads</p><h1 class="reveal">Batt UMG</h1></div>
       <div class="project-meta reveal"><div class="meta-item"><span class="meta-label">Client</span><span class="meta-value">The Armored Group</span></div><div class="meta-item"><span class="meta-label">Year</span><span class="meta-value">2024</span></div><div class="meta-item"><span class="meta-label">Services</span><span class="meta-value">Pre-Production, Production, Post Production</span></div><div class="meta-item"><span class="meta-label">Category</span><span class="meta-value">Mid-Level Ads</span></div></div>
     </div>
-    <div class="project-video-section reveal"><div style="width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,#0a0a0a,#181818);border-radius:12px;border:1px solid var(--gray-border);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;"><div style="width:80px;height:80px;border-radius:50%;border:2px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;background:rgba(229,0,0,0.2);"><svg width="30" height="30" viewBox="0 0 24 24" fill="white" style="margin-left:4px;"><path d="M8 5v14l11-7z"/></svg></div><p style="font-size:0.8rem;color:var(--gray);">Batt UMG</p></div></div>
-    <div style="margin-top:3rem;" class="reveal"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80" alt="Batt UMG" style="width:100%;border-radius:12px;border:1px solid var(--gray-border);" loading="lazy" /></div>
+    <div class="project-video-section reveal" data-parallax="0.3">
+      <div style="width:100%;aspect-ratio:16/9;position:relative;overflow:hidden;border-radius:12px;border:1px solid var(--gray-border);">
+        <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1581833971088-243e618fb6c0?w=1200&q=80&auto=format&fit=crop') center/cover;filter:grayscale(0.3) contrast(1.1);"></div>
+        <div class="cinematic-overlay"></div>
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;z-index:2;">
+          <div style="width:80px;height:80px;border-radius:50%;border:2px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;background:rgba(229,0,0,0.3);backdrop-filter:blur(10px);transition:all 0.6s cubic-bezier(0.22, 1, 0.36, 1);">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="white" style="margin-left:4px;"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <p style="font-size:0.8rem;color:var(--gray);text-shadow:0 2px 4px rgba(0,0,0,0.5);">Batt UMG</p>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:3rem;position:relative;" class="reveal" data-parallax="0.2">
+      <div style="position:relative;overflow:hidden;border-radius:12px;border:1px solid var(--gray-border);">
+        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=1200&q=80&auto=format&fit=crop" alt="Batt UMG" style="width:100%;display:block;filter:contrast(1.1) saturate(0.9);" loading="lazy" />
+        <div class="cinematic-overlay"></div>
+      </div>
+    </div>
     <div style="margin-top:3rem;" class="reveal"><h2 style="font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:700;margin-bottom:1rem;">About This Project</h2><p class="project-description">A powerful ad film for The Armored Group's Batt UMG product line. We showcased the strength, reliability, and innovation of their armored vehicles through cinematic production value and compelling storytelling that resonated with their professional and government audience.</p></div>
   </section>
   <section class="cta-section"><p class="cta-tagline reveal">Like what you see?</p><h2 class="reveal">Ready to create something<br><span style="color:var(--red);">extraordinary?</span></h2><div class="reveal"><a href="https://airtable.com/appAfWnobPze99cGi/shrAgx3vtgy8wOfSn" target="_blank" class="btn btn-red" style="font-size:1rem;padding:1rem 2.5rem;margin-right:1rem;">Let's Collaborate</a><a href="../projects.html" class="btn btn-outline" style="font-size:1rem;padding:1rem 2.5rem;">View All Projects</a></div></section>

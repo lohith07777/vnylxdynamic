@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | House of Shafaq</title>
+  <title>About Us | VNYL</title>
   <meta name="description" content="Headquartered in Dubai, we operate at the intersection of media production, social-first content creation, and strategic consulting." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,15 +11,26 @@
 </head>
 <body>
 
+  <!-- LOADING SCREEN -->
+  <div class="loader">
+    <div class="loader-logo">VNYL</div>
+  </div>
+
+  <!-- FILM GRAIN OVERLAY -->
+  <div class="film-grain"></div>
+
+  <!-- CURSOR GLOW -->
+  <div class="cursor-glow"></div>
+
   <!-- NAVIGATION -->
   <nav class="nav" id="main-nav">
-    <a href="../index.html" class="nav-logo">HOS<span>*</span></a>
+    <a href="../index.html" class="nav-logo">VNYL</a>
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="about.html" class="active">About</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="https://airtable.com/appAfWnobPze99cGi/shr5vTMzfOt1LfdZs" target="_blank" class="nav-cta">Let's Talk</a></li>
+      <li><a href="https://calendly.com/lohithviswanathan7/30min" target="_blank" class="nav-cta">Let's Talk</a></li>
     </ul>
     <div class="nav-toggle" id="nav-toggle">
       <span></span><span></span><span></span>
@@ -28,71 +39,78 @@
 
   <!-- MOBILE NAV -->
   <div class="mobile-nav" id="mobile-nav">
-    <a href="../index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="https://airtable.com/appAfWnobPze99cGi/shr5vTMzfOt1LfdZs" target="_blank">Let's Talk</a>
+    <button class="mobile-menu-close" id="mobile-menu-close">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="mobile-menu-content">
+      <a href="../index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="services.html">Services</a>
+      <a href="https://calendly.com/lohithviswanathan7/30min" target="_blank">Let's Talk</a>
+    </div>
   </div>
 
   <!-- PAGE HERO -->
   <section class="page-hero">
-    <p class="page-hero-eyebrow reveal">About Us</p>
-    <h1 class="reveal">Discover the Team That Adds a Dose of Fun to Video Production.</h1>
-    <p class="reveal">This Is Us, the House of Shafaq family — where passion meets pixels with a smile!</p>
+    <p class="page-hero-eyebrow reveal">About VNYL</p>
+    <h1 class="reveal">We Build Brands That Stand Out and Actually Grow.</h1>
+    <p class="reveal">We create content, strategy, and digital experiences that drive real results.</p>
   </section>
 
   <!-- ABOUT INTRO -->
   <section class="about-section">
     <div class="about-intro-grid">
       <div class="about-intro-text reveal-left">
-        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:0.8rem;">About Our Agency</div>
-        <h2>We're a top-tier Production House &amp; Social Media Content Agency in Dubai.</h2>
-        <p>As storytellers and strategists, we bring your vision to life with high-quality production and engaging digital content.</p>
-        <p>Our mission is clear: to transform ideas into compelling visual stories. We believe that every project is an opportunity to create something extraordinary. Whether it's a corporate video, a commercial, an event coverage, or an animation, we approach each endeavor with creativity, enthusiasm, and a commitment to exceeding our clients' expectations.</p>
-        <p>We're the storytellers, visionaries, and creative dreamers who turn your ideas into cinematic adventures. With us, work feels like play, and every project is a chance to make magic happen.</p>
+        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:0.8rem;">Who We Are</div>
+        <h2>We are a digital marketing studio focused on building brands that grow.</h2>
+        <p>We combine content, design, and strategy to help brands stand out and perform in the digital space.</p>
+        <p>Our focus is simple — create content that connects, build systems that scale, and deliver results that actually matter.</p>
+        <p>We work closely with brands to understand their goals and turn them into clear, effective digital strategies.</p>
       </div>
       <div class="about-visual reveal-right">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80" alt="Our creative team" loading="lazy" />
+        <img src="https://i.ibb.co/3yNQnB6D/43960c76f1186a7fc96f4dc5b00f1b54.jpg" alt="43960c76f1186a7fc96f4dc5b00f1b54" loading="lazy" />
       </div>
     </div>
 
     <!-- Why Us Boxes -->
     <div style="margin-bottom: 5rem;">
-      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:0.8rem;" class="reveal">Why Us?</div>
-      <h2 style="font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:0.8rem;" class="reveal">People hire us not just because we're good<br>at what we do <span style="color:var(--red);">(spoiler: we are!)</span></h2>
-      <p style="color:var(--gray);max-width:600px;margin-bottom:3rem;line-height:1.75;" class="reveal">But because we bring the 'wow' and 'wow again' to every project. We're the friendly faces who turn your ideas into eye-popping video magic.</p>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:0.8rem;" class="reveal">Why VNYL</div>
+      <h2 style="font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:0.8rem;" class="reveal">Brands choose us because we build systems that drive real growth</h2>
+      <p style="color:var(--gray);max-width:600px;margin-bottom:3rem;line-height:1.75;" class="reveal">We focus on strategy, content, and execution that consistently delivers results.</p>
 
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
         <div class="vtype-card reveal reveal-delay-1">
           <div class="vtype-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-          <h3>Exceptional Creativity</h3>
-          <p>Clients choose us for our unparalleled creative prowess. We breathe life into ideas, turning them into visually stunning, memorable videos.</p>
+          <h3>Strategic Execution</h3>
+          <p>We don't just create content — we build strategies that convert and scale.</p>
         </div>
         <div class="vtype-card reveal reveal-delay-2">
           <div class="vtype-icon"><svg viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg></div>
-          <h3>Proven Track Record</h3>
-          <p>Our portfolio is a testament to our success. We've consistently delivered outstanding results, earning the trust of clients time and again.</p>
+          <h3>Consistent Results</h3>
+          <p>We focus on performance-driven content that delivers measurable growth.</p>
         </div>
         <div class="vtype-card reveal reveal-delay-3">
           <div class="vtype-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
-          <h3>Collaborative Approach</h3>
-          <p>We don't just work for our clients; we work with them. Our collaborative spirit ensures that each project is a true partnership, vision coming to life.</p>
+          <h3>Clear Communication</h3>
+          <p>We work closely with clients to ensure clarity, speed, and alignment at every step.</p>
         </div>
         <div class="vtype-card reveal reveal-delay-1">
           <div class="vtype-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg></div>
-          <h3>Innovative Solutions</h3>
-          <p>We're known for pushing boundaries and finding innovative solutions. Clients appreciate our ability to think outside the box and deliver beyond expectations.</p>
+          <h3>Scalable Systems</h3>
+          <p>We build processes and content systems that grow with your brand.</p>
         </div>
         <div class="vtype-card reveal reveal-delay-2">
           <div class="vtype-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg></div>
-          <h3>Exceptional Team</h3>
-          <p>Our team is a powerhouse of talent, experience, and passion. Clients choose us for the depth of expertise and dedication we bring to every project.</p>
+          <h3>Focused Team</h3>
+          <p>A small, focused team dedicated to execution, not unnecessary complexity.</p>
         </div>
         <div class="vtype-card reveal reveal-delay-3">
           <div class="vtype-icon"><svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg></div>
-          <h3>Attention to Detail</h3>
-          <p>We obsess over the finer points. Every frame, every edit, every sound is carefully crafted to ensure the highest quality and maximum impact.</p>
+          <h3>Performance Focus</h3>
+          <p>Every piece of content is designed to perform, not just look good.</p>
         </div>
       </div>
     </div>
@@ -101,29 +119,29 @@
   <!-- VALUES -->
   <section class="values-section">
     <div class="reveal">
-      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:0.8rem;">Our Values</div>
-      <h2>The Secret Sauce in Every<br>House of Shafaq Creation!</h2>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:0.8rem;">Our Approach</div>
+      <h2>The Principles Behind Everything We Do</h2>
     </div>
-    <div class="values-grid" style="margin-top:3rem;">
+    <div class="values-grid" style="margin-top:3rem;border: 1px solid rgba(255, 255, 255, 0.08);border-radius: 12px;padding: 40px;">
       <div class="value-card reveal reveal-delay-1">
         <div class="value-num">01</div>
-        <h3>Creativity</h3>
-        <p>We believe in the power of imagination and creative thinking. We strive to infuse innovation and originality into everything we do, producing unique and captivating video content.</p>
+        <h3>Clarity</h3>
+        <p>We focus on clear thinking, clear messaging, and clear execution in everything we build.</p>
       </div>
       <div class="value-card reveal reveal-delay-2">
         <div class="value-num">02</div>
-        <h3>Quality</h3>
-        <p>Excellence is non-negotiable. We are committed to delivering top-notch video production services that meet and exceed our clients' expectations, from concept to final product.</p>
+        <h3>Consistency</h3>
+        <p>We deliver consistent output that helps brands grow steadily over time.</p>
       </div>
       <div class="value-card reveal reveal-delay-3">
         <div class="value-num">03</div>
-        <h3>Collaboration</h3>
-        <p>We value teamwork and collaboration. We work closely with our clients, understanding their vision and goals, to ensure that every project is a true collaboration resulting in success.</p>
+        <h3>Execution</h3>
+        <p>Ideas are nothing without execution. We focus on doing, not just planning.</p>
       </div>
       <div class="value-card reveal reveal-delay-4">
         <div class="value-num">04</div>
-        <h3>Integrity</h3>
-        <p>Trust and honesty are at the heart of our agency. We maintain the highest ethical standards in all our interactions, ensuring transparency, reliability, and long-lasting relationships.</p>
+        <h3>Results</h3>
+        <p>Everything we create is aligned with one goal — driving real, measurable growth.</p>
       </div>
     </div>
   </section>
@@ -131,7 +149,7 @@
   <!-- HOW WE WORK -->
   <section class="how-we-work">
     <h2 class="reveal">How We Work</h2>
-    <p class="how-sub reveal">At House of Shafaq, we're all about making the creative process feel like a breeze on a sunny day. We start by diving headfirst into your ideas, and then we sprinkle our creative magic like confetti at a party.</p>
+    <p class="how-sub reveal">At VNYL, we focus on clear strategy, consistent execution, and measurable results. We work closely with brands to understand their goals and turn them into effective digital systems.</p>
     <div class="steps-grid">
       <div class="step-card reveal reveal-delay-1">
         <div class="step-number">01</div>
@@ -158,27 +176,42 @@
 
   <!-- TEAM -->
   <section class="team-section">
-    <h2 class="reveal">Peek Behind the Curtain:<br>Meet Our Fantastic Team!</h2>
+    <h2 class="reveal-up">Meet the Team Behind VNYL</h2>
     <div class="team-grid">
-      <div class="team-card reveal reveal-delay-1">
-        <div class="team-avatar">E</div>
+      <div class="team-card reveal-up stagger-1">
+        <div class="team-avatar-enhanced">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=85&fit=crop&crop=face" alt="Emad Mohamed - CEO of House of Shafaq" loading="lazy" />
+          <div class="team-overlay">
+            <p style="color: var(--gray-light); font-size: 0.85rem; line-height: 1.6;">Leading vision and strategy with over 15 years in media production.</p>
+          </div>
+        </div>
         <div class="team-info">
-          <h3>Emad Mohamed</h3>
-          <p>CEO</p>
+          <h3>Lohith</h3>
+          <p>Founder</p>
         </div>
       </div>
-      <div class="team-card reveal reveal-delay-2">
-        <div class="team-avatar">M</div>
+      <div class="team-card reveal-up stagger-2">
+        <div class="team-avatar-enhanced">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=85&fit=crop&crop=face" alt="Mohammed Shafaqh - CCO of House of Shafaq" loading="lazy" />
+          <div class="team-overlay">
+            <p style="color: var(--gray-light); font-size: 0.85rem; line-height: 1.6;">Creative genius behind our most award-winning campaigns.</p>
+          </div>
+        </div>
         <div class="team-info">
-          <h3>Mohammed Shafaqh</h3>
-          <p>CCO</p>
+          <h3>Danniel</h3>
+          <p>Founder</p>
         </div>
       </div>
-      <div class="team-card reveal reveal-delay-3">
-        <div class="team-avatar">S</div>
+      <div class="team-card reveal-up stagger-3">
+        <div class="team-avatar-enhanced">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=85&fit=crop&crop=face" alt="Saad K Mohammed - CRO of House of Shafaq" loading="lazy" />
+          <div class="team-overlay">
+            <p style="color: var(--gray-light); font-size: 0.85rem; line-height: 1.6;">Building partnerships that drive growth and innovation.</p>
+          </div>
+        </div>
         <div class="team-info">
-          <h3>Saad K Mohammed</h3>
-          <p>CRO</p>
+          <h3>Akshay</h3>
+          <p>Manager</p>
         </div>
       </div>
     </div>
@@ -187,36 +220,37 @@
   <!-- SKILLS TICKER -->
   <div class="ticker">
     <div class="ticker-track">
-      <div class="ticker-item">VFX</div>
-      <div class="ticker-item">Filming</div>
-      <div class="ticker-item">Scriptwriting</div>
-      <div class="ticker-item">Sound Design</div>
-      <div class="ticker-item">Color Grading</div>
-      <div class="ticker-item">Motion Graphics</div>
-      <div class="ticker-item">3D Animation</div>
-      <div class="ticker-item">Drone Footage</div>
-      <div class="ticker-item">Commercial Production</div>
-      <div class="ticker-item">Social Media Content</div>
-      <div class="ticker-item">VFX</div>
-      <div class="ticker-item">Filming</div>
-      <div class="ticker-item">Scriptwriting</div>
-      <div class="ticker-item">Sound Design</div>
-      <div class="ticker-item">Color Grading</div>
-      <div class="ticker-item">Motion Graphics</div>
-      <div class="ticker-item">3D Animation</div>
-      <div class="ticker-item">Drone Footage</div>
-      <div class="ticker-item">Commercial Production</div>
-      <div class="ticker-item">Social Media Content</div>
+      <div class="ticker-item">Content Creation</div>
+      <div class="ticker-item">Video Editing</div>
+      <div class="ticker-item">Social Media Management</div>
+      <div class="ticker-item">Ad Creatives</div>
+      <div class="ticker-item">Short Form Content</div>
+      <div class="ticker-item">Brand Content</div>
+      <div class="ticker-item">Website Development</div>
+      <div class="ticker-item">Creative Strategy</div>
+      <div class="ticker-item">Performance Marketing</div>
+      <div class="ticker-item">Content Planning</div>
+      <div class="ticker-item">Content Creation</div>
+      <div class="ticker-item">Video Editing</div>
+      <div class="ticker-item">Social Media Management</div>
+      <div class="ticker-item">Ad Creatives</div>
+      <div class="ticker-item">Short Form Content</div>
+      <div class="ticker-item">Brand Content</div>
+      <div class="ticker-item">Website Development</div>
+      <div class="ticker-item">Creative Strategy</div>
+      <div class="ticker-item">Performance Marketing</div>
+      <div class="ticker-item">Content Planning</div>
     </div>
   </div>
 
   <!-- CTA -->
   <section class="cta-section">
-    <p class="cta-tagline reveal">Not limited to video, we're your creative comrades.</p>
-    <h2 class="reveal">Got questions, project ideas,<br>or just want to say hi?<br><span style="color:var(--red);">We're all ears!</span></h2>
-    <p class="reveal">Let's build something amazing together.</p>
-    <div class="reveal">
-      <a href="https://airtable.com/appAfWnobPze99cGi/shrAgx3vtgy8wOfSn" target="_blank" class="btn btn-red" style="font-size:1rem; padding: 1rem 2.5rem;">Let's Collaborate</a>
+    <div class="cta-bg-animated"></div>
+    <p class="cta-tagline reveal-up">READY TO SCALE YOUR BRAND WITH CLARITY AND STRATEGY</p>
+    <h2 class="reveal-up stagger-1 text-reveal">Got questions, ideas, or ready to grow? Let's talk.</h2>
+    <p class="reveal-up stagger-2">Book a call and let's plan your next move.</p>
+    <div class="reveal-up stagger-3">
+      <a href="https://calendly.com/lohithviswanathan7/30min" target="_blank" class="btn btn-red btn-magnetic" style="font-size:1rem; padding: 1rem 2.5rem;">Let's Collaborate</a>
     </div>
   </section>
 
@@ -224,18 +258,17 @@
   <footer>
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="../index.html" class="footer-logo">HOS<span>*</span></a>
-        <p class="footer-desc">Dubai's premier production house and digital content agency. We bring stories to life through expert storytelling, visuals, and strategy.</p>
-        <div class="footer-contact-item">📍 101, Barsha Valley, Al Barsha, Dubai, UAE.</div>
-        <div class="footer-contact-item">✉️ <a href="mailto:admin@houseofshafaq.com">admin@houseofshafaq.com</a></div>
-        <div class="footer-contact-item">📞 <a href="tel:+97145757813">+971 4 575 7813</a></div>
+        <a href="../index.html" class="footer-logo">VNYL</a>
+        <p class="footer-desc">Digital marketing studio helping brands grow through content, design, and strategy.</p>
+        <div class="footer-contact-item">📍 Korattur, Chennai - 80</div>
+        <div class="footer-contact-item">✉️ <a href="mailto:work@vnyl.in">work@vnyl.in</a></div>
+        <div class="footer-contact-item">📞 <a href="tel:+919176710079">+91 9176710079</a></div>
         <div class="footer-contact-item">🕐 Monday - Friday: 9am to 5pm</div>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
         <ul>
           <li><a href="../index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="https://form.jotform.com/251000771120437" target="_blank">Contact</a></li>
@@ -251,7 +284,7 @@
         <h4>Social Media</h4>
         <ul>
           <li>
-            <a href="https://www.instagram.com/houseofshafaq/" target="_blank" class="footer-social-link">
+            <a href="https://www.instagram.com/vnyl.in?igsh=cHRqM3ZjdzhyaHhl" target="_blank" class="footer-social-link">
               <span class="footer-social-icon">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
               </span>
@@ -262,11 +295,67 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2025 House of Shafaq LLC. All rights reserved.</span>
+      <span>&copy; 2026 VNYL. All rights reserved.</span>
       <a href="privacy-policy.html">Privacy Policy</a>
     </div>
   </footer>
 
   <script src="../scripts/main.js"></script>
+  <script>
+  document.querySelectorAll('a').forEach(link => {
+    if (link.textContent.trim().toLowerCase() === 'projects') {
+      link.remove();
+    }
+  });
+  </script>
+  <script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  window.addEventListener('scroll', () => {
+    reveals.forEach(el => {
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+
+      if (elementTop < windowHeight - 100) {
+        el.classList.add('active');
+      }
+    });
+  });
+  </script>
+  <script>
+  document.querySelectorAll('.service-card, .vtype-card').forEach(box => {
+    box.addEventListener('mousemove', e => {
+      const rect = box.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      box.style.setProperty('--x', x + 'px');
+      box.style.setProperty('--y', y + 'px');
+    });
+  });
+  </script>
+<script>
+// Mobile Navigation Toggle
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('mobile-nav');
+const menuClose = document.getElementById('mobile-menu-close');
+
+// Open menu
+navToggle.addEventListener('click', () => {
+  navLinks.classList.add('active');
+});
+
+// Close menu with X button
+menuClose.addEventListener('click', () => {
+  navLinks.classList.remove('active');
+});
+
+// Close mobile nav when clicking links
+document.querySelectorAll('#mobile-nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
+});
+</script>
 </body>
 </html>
