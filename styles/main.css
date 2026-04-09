@@ -156,22 +156,34 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   display: none !important;
 }
 
-/* Mobile menu toggle */
+/* HIDE hamburger on desktop */
 .nav-toggle {
   display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  padding: 4px;
+}
+
+/* SHOW hamburger ONLY on mobile */
+@media (max-width: 768px) {
+  .nav-toggle {
+    width: 26px !important;
+    height: 18px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    cursor: pointer;
+    padding: 0 !important;
+    background: none !important;
+    border: none !important;
+  }
 }
 
 .nav-toggle span {
-  display: block;
-  width: 28px;
-  height: 2px;
-  background: var(--white);
-  border-radius: 2px;
-  transition: all var(--transition);
+  display: block !important;
+  width: 100% !important;
+  height: 2px !important;
+  background-color: white !important;
+  border-radius: 2px !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
@@ -4043,6 +4055,494 @@ div::-webkit-scrollbar {
   .value-card:hover,
   .step-card:hover {
     transform: translateY(-4px) scale(1.02);
+  }
+}
+
+/* =====================================================
+   COMPREHENSIVE MOBILE OPTIMIZATION
+   ===================================================== */
+
+@media (max-width: 768px) {
+  
+  /* ---- Typography Mobile ---- */
+  h1 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    font-size: clamp(1.4rem, 5vw, 2rem);
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+  }
+  
+  h3 {
+    font-size: clamp(1.1rem, 4vw, 1.5rem);
+    line-height: 1.3;
+  }
+  
+  p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  /* ---- Layout Mobile ---- */
+  .hero {
+    padding: 6rem 1rem 3rem;
+    min-height: auto;
+  }
+  
+  .section, .about-section, .services-section {
+    padding: 3rem 1rem;
+  }
+  
+  /* ---- Grid Layouts Mobile ---- */
+  .about-intro-grid,
+  .steps-grid,
+  .values-grid,
+  .team-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .service-items-grid,
+  .video-types-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  /* ---- Cards Mobile ---- */
+  .service-card,
+  .vtype-card,
+  .testimonial-card,
+  .value-card,
+  .step-card,
+  .team-card {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* ---- Touch Feedback ---- */
+  .service-card:active,
+  .vtype-card:active,
+  .testimonial-card:active,
+  .value-card:active,
+  .step-card:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+  
+  /* ---- Animations Simplified ---- */
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.4s ease;
+  }
+  
+  /* ---- Performance ---- */
+  .film-grain {
+    display: none;
+  }
+  
+  /* ---- Spacing ---- */
+  .cta-section {
+    padding: 4rem 1rem;
+  }
+  
+  .faq-section {
+    padding: 3rem 1rem;
+  }
+  
+  /* ---- SECTION SPACING FIX ---- */
+  
+  /* Remove excessive margins between sections */
+  section {
+    margin-bottom: 0 !important;
+  }
+  
+  /* Fix gap between Hero/CTA and Our Approach */
+  .page-hero,
+  .about-section,
+  .values-section {
+    margin-bottom: 0 !important;
+    padding-bottom: 2rem !important;
+  }
+  
+  /* Remove large inline margins */
+  [style*="margin-bottom: 5rem"],
+  [style*="margin-bottom:5rem"] {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  [style*="margin-bottom: 3rem"],
+  [style*="margin-bottom:3rem"] {
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Tight section transitions */
+  .about-section + .values-section,
+  .page-hero + .about-section {
+    margin-top: 0 !important;
+    padding-top: 1rem !important;
+  }
+  
+  /* Remove empty space from containers */
+  div[style*="margin-bottom"] {
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Remove fixed heights causing blank space */
+  section,
+  .page-hero,
+  .about-section,
+  .values-section {
+    min-height: auto !important;
+    height: auto !important;
+  }
+  
+  /* Fix overflow/animation spacing issues */
+  .reveal,
+  .reveal-up,
+  .reveal-left,
+  .reveal-right {
+    transform: none !important;
+    opacity: 1 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  
+  /* Clean spacing between major sections */
+  .values-section {
+    padding-top: 1rem !important;
+  }
+  
+  /* ---- CARDS MOBILE PREMIUM ---- */
+  
+  /* FORCE all grids to single column - override inline styles */
+  .service-items-grid,
+  .video-types-grid,
+  .values-grid,
+  .steps-grid,
+  .team-grid,
+  .features-grid,
+  [class*="grid"],
+  [style*="grid"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+    gap: 1.5rem !important;
+  }
+  
+  /* Override any div with inline grid styles */
+  div[style*="display:grid"],
+  div[style*="grid-template-columns:repeat"] {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+  }
+  
+  /* Specific override for Why Us section */
+  .about-section > div > div[style*="grid"],
+  .about-intro-grid + div > div[style*="grid"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  /* Why Us / VType Cards - Strategic Execution, Consistent Results, etc */
+  .vtype-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 2rem 1.5rem !important;
+    margin-bottom: 1rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    box-sizing: border-box !important;
+  }
+  
+  .vtype-card h3 {
+    font-size: 1.25rem !important;
+    line-height: 1.4 !important;
+    margin-top: 0.75rem !important;
+    margin-bottom: 0.75rem !important;
+    width: 100% !important;
+    word-wrap: break-word !important;
+    white-space: normal !important;
+  }
+  
+  .vtype-card p {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    width: 100% !important;
+    word-wrap: break-word !important;
+  }
+  
+  .vtype-card .vtype-icon {
+    margin-bottom: 0.75rem !important;
+  }
+  
+  /* Features/Value Cards Specific */
+  .value-card,
+  .feature-card,
+  [class*="value"],
+  [class*="feature"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1.75rem 1.25rem !important;
+    margin-bottom: 1rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+  
+  /* Card headings in features section */
+  .value-card h3,
+  .feature-card h3,
+  .value-card h4,
+  .feature-card h4,
+  [class*="value"] h3,
+  [class*="feature"] h3 {
+    font-size: 1.2rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0.75rem !important;
+    width: 100% !important;
+    word-wrap: break-word !important;
+  }
+  
+  /* Card descriptions */
+  .value-card p,
+  .feature-card p,
+  [class*="value"] p,
+  [class*="feature"] p {
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+    width: 100% !important;
+  }
+  
+  /* Number/Icon styling */
+  .value-num,
+  .feature-num,
+  [class*="value"] [class*="num"],
+  [class*="feature"] [class*="num"] {
+    font-size: 2rem !important;
+    margin-bottom: 0.75rem !important;
+    display: block !important;
+  }
+  
+  /* Individual card styling */
+  .service-card,
+  .vtype-card,
+  .value-card,
+  .step-card,
+  .team-card,
+  .testimonial-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 2rem 1.5rem !important;
+    margin-bottom: 1rem !important;
+    min-height: auto !important;
+  }
+  
+  /* Card internal spacing */
+  .service-card h3,
+  .vtype-card h3,
+  .value-card h3,
+  .step-card h3 {
+    font-size: 1.3rem !important;
+    margin-top: 1rem !important;
+    margin-bottom: 0.8rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  .service-card p,
+  .vtype-card p,
+  .value-card p,
+  .step-card p {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 0 !important;
+  }
+  
+  /* Icon spacing */
+  .vtype-icon,
+  .step-number,
+  .value-num {
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Touch feedback for all cards */
+  .service-card:active,
+  .vtype-card:active,
+  .value-card:active,
+  .feature-card:active,
+  .step-card:active,
+  .team-card:active,
+  .testimonial-card:active,
+  [class*="value"]:active,
+  [class*="feature"]:active,
+  [class*="vtype"]:active {
+    transform: scale(0.98) !important;
+    transition: transform 0.15s ease !important;
+    background: var(--bg-card-hover) !important;
+  }
+  
+  /* Why Us section container override */
+  div:has(> .vtype-card) {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  /* Why Us boxes section */
+  .vtype-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  
+  /* How we work steps */
+  .step-card {
+    text-align: left !important;
+  }
+  
+  /* Prevent text overflow */
+  .service-card h3,
+  .vtype-card h3,
+  .value-card h3,
+  .step-card h3,
+  .team-card h3 {
+    word-wrap: break-word !important;
+    hyphens: auto !important;
+  }
+  
+  /* Service items specific */
+  .service-item {
+    width: 100% !important;
+    padding: 1.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .service-item h4 {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .service-item p {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
+}
+
+/* =====================================================
+   MOBILE NAVIGATION - GLASSMORPHISM DESIGN
+   ===================================================== */
+
+@media (max-width: 768px) {
+  
+  /* Mobile Menu Container */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+    z-index: 9999;
+  }
+  
+  .mobile-menu.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* Menu Content */
+  .menu-content {
+    width: 85%;
+    max-width: 320px;
+    padding: 30px 20px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  
+  /* Menu Links */
+  .menu-content a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+  }
+  
+  .menu-content a:hover {
+    opacity: 1;
+  }
+  
+  .menu-content a:first-child {
+    color: #ff2c2c;
+    opacity: 1;
+  }
+  
+  /* Call Button */
+  .call-btn {
+    margin-top: 15px;
+    background: white;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .call-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.3);
+  }
+  
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+  }
+  
+  .close-btn:hover {
+    background: rgba(255,255,255,0.1);
   }
 }
 

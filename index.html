@@ -33,24 +33,21 @@
       <li><a href="pages/services.html">Services</a></li>
       <li><a href="https://calendly.com/lohithviswanathan7/30min" target="_blank" class="nav-cta">Let's Talk</a></li>
     </ul>
-    <div class="nav-toggle" id="nav-toggle">
-      <span></span><span></span><span></span>
+    <div class="nav-toggle" id="navToggle">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </nav>
 
-  <!-- MOBILE NAV -->
-  <div class="mobile-nav" id="mobile-nav">
-    <button class="mobile-menu-close" id="mobile-menu-close">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="18" y1="6" x2="6" y2="18"></line>
-        <line x1="6" y1="6" x2="18" y2="18"></line>
-      </svg>
-    </button>
-    <div class="mobile-menu-content">
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" id="closeMenu">✕</button>
+    <div class="menu-content">
       <a href="index.html" class="active">Home</a>
       <a href="pages/about.html">About</a>
       <a href="pages/services.html">Services</a>
-      <a href="https://calendly.com/lohithviswanathan7/30min" target="_blank">Let's Talk</a>
+      <button class="call-btn">Call +91 9176710079</button>
     </div>
   </div>
 
@@ -65,7 +62,7 @@
     <div class="hero-content">
       <div class="hero-eyebrow reveal-up">
         <div class="eyebrow-line"></div>
-        <span style="color: var(--red);">Digital Marketing Studio</span>
+        <span style="color: var(--red);">Digital Marketing Company</span>
       </div>
       <h1 class="text-reveal">Turning creative ideas into content that drives real growth.</h1>
       <p class="hero-sub reveal-up stagger-2">Helping brands grow through content, design, and strategy.</p>
@@ -467,17 +464,22 @@
   </script>
   <script>
   // Mobile Navigation Toggle
-  const navToggle = document.getElementById('nav-toggle');
-  const navLinks = document.getElementById('mobile-nav');
+  const toggle = document.getElementById("navToggle");
+  const menu = document.getElementById("mobileMenu");
+  const closeBtn = document.getElementById("closeMenu");
 
-  navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+  toggle.addEventListener("click", () => {
+    menu.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    menu.classList.remove("active");
   });
 
   // Close mobile nav when clicking links
-  document.querySelectorAll('#mobile-nav a').forEach(link => {
+  document.querySelectorAll('.menu-content a').forEach(link => {
     link.addEventListener('click', () => {
-      navLinks.classList.remove('active');
+      menu.classList.remove('active');
     });
   });
   </script>
