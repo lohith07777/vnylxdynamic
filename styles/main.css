@@ -548,6 +548,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   
   .clients-marquee {
     gap: 2rem;
+    animation: marquee 8s linear infinite !important;
   }
   
   .client-logo {
@@ -569,6 +570,10 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 }
 
 .client-logo:hover { color: var(--white); }
+
+
+
+
 
 /* =====================================================
    SERVICES SECTION (Home Preview)
@@ -1580,6 +1585,13 @@ p, span, div, li {
   content: '✦';
   color: var(--red);
   font-size: 0.6rem;
+}
+
+/* Mobile ticker speed optimization */
+@media (max-width: 768px) {
+  .ticker-track {
+    animation: marquee 6s linear infinite !important;
+  }
 }
 
 /* =====================================================
@@ -5218,10 +5230,10 @@ div::-webkit-scrollbar {
   }
   
   /* Call Button */
-  .call-btn {
+  .menu-content .call-btn {
     margin-top: 15px;
     background: white;
-    color: black;
+    color: #000 !important;
     border: none;
     padding: 12px 20px;
     border-radius: 999px;
@@ -5229,6 +5241,7 @@ div::-webkit-scrollbar {
     font-size: 16px;
     font-weight: 600;
     transition: all 0.3s ease;
+    opacity: 1 !important;
   }
   
   .call-btn:hover {

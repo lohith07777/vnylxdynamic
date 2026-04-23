@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectFilter();
   initFAQAccordion();
   initCounters();
-  initCursorGlow();
+    initCursorGlow();
   // initSmoothScroll(); // Replaced with Lenis
   initPerformanceOptimizations();
 
@@ -630,6 +630,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  
+  
+  
+  
+  
   // ---- Project Filter ----
   function initProjectFilter() {
     const filterBtns = document.querySelectorAll('.filter-btn');
