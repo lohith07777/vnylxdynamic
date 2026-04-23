@@ -7,7 +7,7 @@
   <meta name="description" content="Our team works across industries, collaborating with startups, legacy brands, and global businesses to create content that doesn't just look good — it drives results." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="/styles/main.css" />
 </head>
 <body>
 
@@ -24,12 +24,12 @@
 
   <!-- NAVIGATION -->
   <nav class="nav" id="main-nav">
-    <a href="../index.html" class="nav-logo">VNYL</a>
+    <a href="/index.html" class="nav-logo">VNYL</a>
     <ul class="nav-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/pages/projects.html">Projects</a></li>
+      <li><a href="/pages/about.html">About</a></li>
+      <li><a href="/pages/services.html">Services</a></li>
       <li><a href="https://calendly.com/lohithviswanathan7/30min" target="_blank" class="nav-cta">Let's Talk</a></li>
     </ul>
     <div class="nav-toggle" id="navToggle">
@@ -43,9 +43,9 @@
   <div class="mobile-menu" id="mobileMenu">
     <button class="close-btn" id="closeMenu">✕</button>
     <div class="menu-content">
-      <a href="../index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html" class="active">Services</a>
+      <a href="/index.html">Home</a>
+      <a href="/pages/about.html">About</a>
+      <a href="/pages/services.html">Services</a>
       <button class="call-btn">Call +91 9176710079</button>
     </div>
   </div>
@@ -275,7 +275,7 @@
   <footer>
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="../index.html" class="footer-logo">VNYL</a>
+        <a href="/index.html" class="footer-logo">VNYL</a>
         <p class="footer-desc">Digital marketing studio helping brands grow through content, design, and strategy.</p>
         <div class="footer-contact-item">📍 Korattur, Chennai - 80</div>
         <div class="footer-contact-item">✉️ <a href="mailto:work@vnyl.in">work@vnyl.in</a></div>
@@ -285,16 +285,16 @@
       <div class="footer-col">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/pages/about.html">About</a></li>
+          <li><a href="/pages/services.html">Services</a></li>
           <li><a href="https://form.jotform.com/251000771120437" target="_blank">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Legal</h4>
         <ul>
-          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="/pages/privacy-policy.html">Privacy Policy</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -313,36 +313,56 @@
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 VNYL. All rights reserved.</span>
-      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="/pages/privacy-policy.html">Privacy Policy</a>
     </div>
   </footer>
 
-  <script src="../scripts/main.js"></script>
+  <script src="/scripts/main.js"></script>
   <script>
-  document.querySelectorAll('a').forEach(link => {
-    if (link.textContent.trim().toLowerCase() === 'projects') {
-      link.remove();
-    }
-  });
-  </script>
-  <script>
-  const reveals = document.querySelectorAll('.reveal');
-
-  window.addEventListener('scroll', () => {
-    reveals.forEach(el => {
-      const windowHeight = window.innerHeight;
-      const elementTop = el.getBoundingClientRect().top;
-
-      if (elementTop < windowHeight - 100) {
-        el.classList.add('active');
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a').forEach(link => {
+      if (link.textContent.trim().toLowerCase() === 'projects') {
+        link.remove();
       }
     });
   });
   </script>
   <script>
-  document.querySelectorAll('.service-card, .vtype-card').forEach(box => {
-    box.addEventListener('mousemove', e => {
+  document.addEventListener('DOMContentLoaded', () => {
+    const reveals = document.querySelectorAll('.reveal');
+
+    window.addEventListener('scroll', () => {
+      reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - 100) {
+          el.classList.add('active');
+        }
+      });
+    });
+  });
+  </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.service-card, .vtype-card').forEach(box => {
+      box.addEventListener('mousemove', e => {
+        const rect = box.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        box.style.setProperty('--x', x + 'px');
+        box.style.setProperty('--y', y + 'px');
+      });
+    });
+  });
+  </script>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.service-item').forEach(box => {
+    box.addEventListener('mousemove', (e) => {
       const rect = box.getBoundingClientRect();
+
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
 
@@ -350,38 +370,28 @@
       box.style.setProperty('--y', y + 'px');
     });
   });
-  </script>
-  <script>
-document.querySelectorAll('.service-item').forEach(box => {
-  box.addEventListener('mousemove', (e) => {
-    const rect = box.getBoundingClientRect();
-
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    box.style.setProperty('--x', x + 'px');
-    box.style.setProperty('--y', y + 'px');
-  });
 });
 </script>
 <script>
-// Mobile Navigation Toggle
-const toggle = document.getElementById("navToggle");
-const menu = document.getElementById("mobileMenu");
-const closeBtn = document.getElementById("closeMenu");
+document.addEventListener('DOMContentLoaded', () => {
+  // Mobile Navigation Toggle
+  const toggle = document.getElementById("navToggle");
+  const menu = document.getElementById("mobileMenu");
+  const closeBtn = document.getElementById("closeMenu");
 
-toggle.addEventListener("click", () => {
-  menu.classList.add("active");
-});
+  toggle.addEventListener("click", () => {
+    menu.classList.add("active");
+  });
 
-closeBtn.addEventListener("click", () => {
-  menu.classList.remove("active");
-});
+  closeBtn.addEventListener("click", () => {
+    menu.classList.remove("active");
+  });
 
-// Close mobile nav when clicking links
-document.querySelectorAll('.menu-content a').forEach(link => {
-  link.addEventListener('click', () => {
-    menu.classList.remove('active');
+  // Close mobile nav when clicking links
+  document.querySelectorAll('.menu-content a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('active');
+    });
   });
 });
 </script>

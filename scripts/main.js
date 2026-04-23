@@ -1,5 +1,5 @@
 // =====================================================
-// HOUSE OF SHAFAQ - Premium Cinematic JavaScript
+// VNYL - Premium Cinematic JavaScript
 // =====================================================
 
 // Load Lenis smooth scrolling library
@@ -615,13 +615,17 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    let autoplay = setInterval(() => slide(1), 5000);
+    // Speed up autoplay on mobile
+    const isMobile = window.innerWidth <= 768;
+    const autoplayInterval = isMobile ? 2500 : 5000;
+    
+    let autoplay = setInterval(() => slide(1), autoplayInterval);
     
     const testimonialsSection = document.querySelector('.testimonials');
     if (testimonialsSection) {
       testimonialsSection.addEventListener('mouseenter', () => clearInterval(autoplay));
       testimonialsSection.addEventListener('mouseleave', () => {
-        autoplay = setInterval(() => slide(1), 5000);
+        autoplay = setInterval(() => slide(1), autoplayInterval);
       });
     }
   }
@@ -1011,22 +1015,129 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ---- Active Nav Link Highlighting ----
-  const navLinks = document.querySelectorAll('.nav-links a');
-  const currentPath = window.location.pathname;
-  const currentPage = currentPath.split('/').pop() || 'index.html';
-  
-  navLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    if (!href || href.startsWith('http')) return;
+  const updateActiveNavStates = () => {
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav a, .menu-content a');
+    const currentPath = window.location.pathname;
+    const currentPage = currentPath.split('/').pop() || 'index.html';
     
-    const linkPage = href.split('/').pop();
-    if (linkPage === currentPage ||
-        (currentPage === '' && linkPage === 'index.html') ||
-        (href.includes('projects') && currentPath.includes('projects') && !currentPath.includes('privacy')) ||
-        (href.includes('about') && currentPath.includes('about')) ||
-        (href.includes('services') && currentPath.includes('services'))) {
-      link.classList.add('active');
-    }
-  });
+    // Function to check if link should be active
+    const isLinkActive = (href) => {
+      if (!href || href.startsWith('http')) return false;
+      
+      const linkPage = href.split('/').pop();
+      
+      // Handle homepage detection more robustly
+      const isHomePage = currentPath === '/' || 
+                         currentPath === '' || 
+                         currentPage === 'index.html' ||
+                         currentPage === '';
+      
+      return (isHomePage && (linkPage === 'index.html' || linkPage === '')) ||
+             linkPage === currentPage ||
+             (href.includes('projects') && currentPath.includes('projects') && !currentPath.includes('privacy')) ||
+             (href.includes('about') && currentPath.includes('about')) ||
+             (href.includes('services') && currentPath.includes('services'));
+    };
+    
+    // Apply active state to desktop navigation
+    navLinks.forEach(link => {
+      link.classList.remove('active'); // Remove existing active states
+      if (isLinkActive(link.getAttribute('href'))) {
+        link.classList.add('active');
+      }
+    });
+    
+    // Apply active state to mobile navigation
+    mobileNavLinks.forEach(link => {
+      link.classList.remove('active'); // Remove existing active states
+      if (isLinkActive(link.getAttribute('href'))) {
+        link.classList.add('active');
+      }
+    });
+  };
+  
+  // Run on initial load
+  updateActiveNavStates();
+  
+  // Also run when DOM is fully loaded to ensure all elements are available
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      updateActiveNavStates();
+      initScrollSpy();
+    });
+  } else {
+    // DOM is already loaded
+    updateActiveNavStates();
+    initScrollSpy();
+  }
+  
+  // ---- Scroll Spy for Single-Page Sections ----
+  const initScrollSpy = () => {
+    // Define sections and their corresponding navigation links
+    const sections = [
+      { id: 'hero', link: 'Home', selector: '.hero, #hero' },
+      { id: 'about', link: 'About', selector: '.about-section, #about, .values-section' },
+      { id: 'services', link: 'Services', selector: '.services-section, #services, .section' }
+    ];
+    
+    const updateActiveSection = () => {
+      const scrollPosition = window.scrollY + 100; // Offset for better detection
+      
+      let activeSection = null;
+      
+      // Find which section is currently in view
+      for (const section of sections) {
+        const element = document.querySelector(section.selector);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const elementTop = rect.top + window.scrollY;
+          const elementBottom = elementTop + rect.height;
+          
+          if (scrollPosition >= elementTop && scrollPosition < elementBottom) {
+            activeSection = section.link;
+            break;
+          }
+        }
+      }
+      
+      // If no section is found, default to Home
+      if (!activeSection && window.scrollY < 200) {
+        activeSection = 'Home';
+      }
+      
+      // Update navigation active states based on active section
+      if (activeSection) {
+        const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav a, .menu-content a');
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          
+          const linkText = link.textContent.trim();
+          if (linkText === activeSection) {
+            link.classList.add('active');
+          }
+        });
+      }
+    };
+    
+    // Throttled scroll event listener
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          updateActiveSection();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    
+    // Add scroll listener
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    // Initial check
+    updateActiveSection();
+  };
 
 });

@@ -1,5 +1,5 @@
 /* =====================================================
-   HOUSE OF SHAFAQ - Main Stylesheet
+   VNYL - Main Stylesheet
    Design System: Dark luxury, cinematic, premium
    ===================================================== */
 
@@ -113,8 +113,8 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
   transition: width var(--transition);
 }
 
-.nav-links a:hover,
-.nav-links a.active { color: var(--white); }
+.nav-links a:hover { color: var(--red); }
+.nav-links a.active { color: var(--red); }
 
 .nav-links a:hover::after,
 .nav-links a.active::after { width: 100%; }
@@ -222,6 +222,7 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 }
 
 .mobile-nav a:hover { color: var(--red); }
+.mobile-nav a.active { color: var(--red); }
 
 /* =====================================================
    HERO SECTION
@@ -4151,6 +4152,141 @@ div::-webkit-scrollbar {
     padding: 4rem 1rem;
   }
   
+  /* ---- Comprehensive Mobile Typography Fixes ---- */
+  
+  /* Hero Headings */
+  .hero h1 {
+    font-size: clamp(2rem, 7vw, 4rem) !important;
+    line-height: 0.95 !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* Section Headings */
+  .section-title {
+    font-size: clamp(1.8rem, 6vw, 3.5rem) !important;
+    line-height: 0.95 !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* Page Hero Headings */
+  .page-hero h1 {
+    font-size: clamp(2rem, 7vw, 3.8rem) !important;
+    line-height: 0.95 !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* About Section Headings */
+  .about-intro-text h2 {
+    font-size: clamp(1.8rem, 6vw, 3rem) !important;
+    line-height: 1.0 !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .values-section h2 {
+    font-size: clamp(1.8rem, 6vw, 3rem) !important;
+    line-height: 1.0 !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .how-we-work h2 {
+    font-size: clamp(1.8rem, 6vw, 3rem) !important;
+    line-height: 1.0 !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* Founders Section */
+  .founders-section h2 {
+    font-size: clamp(1.8rem, 6vw, 3rem) !important;
+    line-height: 1.0 !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* Service Phase Headings */
+  .service-phase-header h2 {
+    font-size: clamp(1.6rem, 5vw, 2.5rem) !important;
+    line-height: 1.0 !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  /* FAQ Section */
+  .faq-section h2 {
+    font-size: clamp(1.8rem, 6vw, 3rem) !important;
+    line-height: 1.0 !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* Testimonials Section */
+  .testimonials h2 {
+    font-size: clamp(1.8rem, 6vw, 3.5rem) !important;
+    line-height: 1.0 !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* Project Detail Headings */
+  .project-detail-header h1 {
+    font-size: clamp(2rem, 7vw, 4rem) !important;
+    line-height: 0.95 !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* CTA Section Headings */
+  .cta-section h2 {
+    font-size: clamp(2rem, 8vw, 3.6rem) !important;
+    line-height: 0.95 !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  /* About Why Us Section */
+  .about-section h2 {
+    font-size: clamp(1.8rem, 6vw, 3rem) !important;
+    line-height: 1.0 !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* General H2 improvements */
+  h2 {
+    font-size: clamp(1.8rem, 6vw, 3rem) !important;
+    line-height: 1.0 !important;
+    letter-spacing: -0.02em !important;
+  }
+  
+  /* General H1 improvements */
+  h1 {
+    font-size: clamp(2rem, 7vw, 4rem) !important;
+    line-height: 0.95 !important;
+    letter-spacing: -0.02em !important;
+  }
+  
+  /* Reduce section spacing on mobile */
+  .section {
+    padding: 4rem 1.5rem !important;
+  }
+  
+  .hero {
+    padding: 6rem 1.5rem 3rem !important;
+  }
+  
+  .page-hero {
+    padding: 4rem 1.5rem !important;
+  }
+  
+  .cta-section {
+    padding: 3rem 1rem !important;
+  }
+  
   .faq-section {
     padding: 3rem 1rem;
   }
@@ -4202,15 +4338,587 @@ div::-webkit-scrollbar {
     height: auto !important;
   }
   
-  /* Fix overflow/animation spacing issues */
-  .reveal,
-  .reveal-up,
-  .reveal-left,
-  .reveal-right {
+  /* ---- COMPREHENSIVE MOBILE LAYOUT FIX ---- */
+  
+  /* Global reset for true full-width mobile layout */
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Force ALL elements to use full width on mobile */
+  * {
+    box-sizing: border-box !important;
+  }
+  
+  /* Override ALL container constraints */
+  .container, .wrapper, .content, .main, .page {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    margin: 0 !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Override ALL section constraints */
+  section, .section, .hero, .about-section, .services-section, .projects-section,
+  .showreel, .testimonials, .cta-section, .values-section, .how-we-work, 
+  .team-section, .faq-section, .founders-section, .page-hero {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    margin: 0 !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+  }
+  
+  /* Override ALL grid and flex containers */
+  .grid, .flex, .row, .container-fluid, .container-lg, .container-md, .container-sm {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    margin: 0 !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Force navigation to full width */
+  .nav, .navbar, .navigation, header {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    margin: 0 !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Force footer to full width */
+  footer, .footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    margin: 0 !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Override any centered layouts */
+  .centered, .text-center, .mx-auto {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Override any transform scale issues */
+  [style*="transform"], [style*="scale"] {
     transform: none !important;
+  }
+  
+  /* Override any fixed width percentages */
+  [style*="width: 90%"], [style*="width: 80%"], [style*="width: 85%"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Ensure all text elements use full width */
+  h1, h2, h3, h4, h5, h6, p, span, div {
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  
+  /* Override any inherited max-width from desktop styles */
+  .hero-content, .showreel-inner, .section-header, .testimonial-wrapper,
+  .cta-wrapper, .founders-wrapper, .services-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  /* Specific section fixes with proper spacing */
+  .hero {
+    padding: 6rem 1rem 3rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .cta-section {
+    padding: 3rem 1rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .cta-section h2 {
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  
+  .testimonials {
+    padding: 4rem 1rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .founders-section {
+    padding: 4rem 1rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .values-section {
+    padding: 4rem 1rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .services-section {
+    padding: 4rem 1rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .about-section {
+    padding: 4rem 1rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  footer {
+    padding: 3rem 1rem 2rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .nav {
+    padding: 1.2rem 1rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Override ALL inherited desktop max-width constraints */
+  .hero-content, .showreel-inner, .section-header, .testimonial-wrapper,
+  .cta-wrapper, .founders-wrapper, .services-wrapper, .about-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  /* Override specific problematic containers */
+  .showreel-inner {
+    margin: 0 !important;
+    padding: 4rem 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .hero-content {
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  /* Override any remaining max-width constraints */
+  [class*="max-width"], [style*="max-width"] {
+    max-width: 100% !important;
+  }
+  
+  /* Override any remaining margin auto */
+  [class*="mx-auto"], [style*="margin: 0 auto"], [style*="margin: auto"] {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  .showreel, .testimonials, .cta-section, .values-section, .how-we-work, .team-section, .faq-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  /* Hero section specific fixes */
+  .hero {
+    padding: 6rem 1.25rem 3rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* CTA section specific fixes */
+  .cta-section {
+    padding: 3rem 1.25rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .cta-section h2 {
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  
+  /* Footer fixes */
+  footer {
+    padding: 3rem 1.25rem 2rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Founders section fixes */
+  .founders-section {
+    padding: 4rem 1.25rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Testimonials section fixes */
+  .testimonials {
+    padding: 4rem 1.25rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Values section fixes */
+  .values-section {
+    padding: 4rem 1.25rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Navigation fixes */
+  .nav {
+    padding: 1.2rem 1.25rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Remove any fixed widths from containers */
+  .container, .wrapper, .content {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+    margin: 0 auto !important;
+  }
+  
+  /* Ensure text content has proper breathing room */
+  h1, h2, h3, p {
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  
+  /* ---- Lightweight Mobile Animations ---- */
+  
+  /* Restore reveal animations with mobile-optimized settings */
+  .reveal {
+    opacity: 0 !important;
+    transform: translateY(20px) !important;
+    transition: opacity 0.6s ease, transform 0.6s ease !important;
+    will-change: transform, opacity !important;
+  }
+  
+  .reveal-up {
+    opacity: 0 !important;
+    transform: translateY(25px) !important;
+    transition: opacity 0.7s ease, transform 0.7s ease !important;
+    will-change: transform, opacity !important;
+  }
+  
+  .reveal-left {
+    opacity: 0 !important;
+    transform: translateX(-20px) !important;
+    transition: opacity 0.6s ease, transform 0.6s ease !important;
+    will-change: transform, opacity !important;
+  }
+  
+  .reveal-right {
+    opacity: 0 !important;
+    transform: translateX(20px) !important;
+    transition: opacity 0.6s ease, transform 0.6s ease !important;
+    will-change: transform, opacity !important;
+  }
+  
+  /* Animation active states */
+  .reveal.in-view,
+  .reveal-up.in-view,
+  .reveal-left.in-view,
+  .reveal-right.in-view {
     opacity: 1 !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
+    transform: translateY(0) translateX(0) !important;
+  }
+  
+  /* Text reveal animations (lightweight) */
+  .text-reveal {
+    overflow: hidden !important;
+  }
+  
+  .text-reveal span {
+    display: inline-block !important;
+    transform: translateY(100%) !important;
+    opacity: 0 !important;
+    transition: opacity 0.5s ease, transform 0.5s ease !important;
+    will-change: transform, opacity !important;
+  }
+  
+  .text-reveal.in-view span {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+  }
+  
+  /* Stagger animations for mobile */
+  .stagger-1 { transition-delay: 0.1s !important; }
+  .stagger-2 { transition-delay: 0.2s !important; }
+  .stagger-3 { transition-delay: 0.3s !important; }
+  .stagger-4 { transition-delay: 0.4s !important; }
+  .stagger-5 { transition-delay: 0.5s !important; }
+  
+  .reveal-delay-1 { transition-delay: 0.1s !important; }
+  .reveal-delay-2 { transition-delay: 0.2s !important; }
+  .reveal-delay-3 { transition-delay: 0.3s !important; }
+  .reveal-delay-4 { transition-delay: 0.4s !important; }
+  .reveal-delay-5 { transition-delay: 0.5s !important; }
+  
+  /* Founder cards animations */
+  .founder-card {
+    opacity: 0 !important;
+    transform: translateY(25px) !important;
+    transition: opacity 0.7s ease, transform 0.7s ease !important;
+    will-change: transform, opacity !important;
+  }
+  
+  .founder-card.reveal-up.in-view {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  
+  /* Founder divider animation */
+  .founder-divider {
+    opacity: 0 !important;
+    transform: scaleY(0) !important;
+    transition: opacity 0.8s ease, transform 0.8s ease !important;
+    will-change: transform, opacity !important;
+  }
+  
+  .founder-divider.reveal-up.in-view {
+    opacity: 1 !important;
+    transform: scaleY(1) !important;
+  }
+  
+  /* Service cards animations */
+  .service-card {
+    opacity: 0 !important;
+    transform: translateY(20px) !important;
+    transition: opacity 0.6s ease, transform 0.6s ease !important;
+    will-change: transform, opacity !important;
+  }
+  
+  .service-card.reveal-up.in-view {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  
+  /* ---- Mobile Testimonial Section Fixes ---- */
+  
+  /* Ensure testimonial section is visible on mobile */
+  .testimonials {
+    min-height: 500px !important;
+    padding: 4rem 1rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+  
+  /* Fix testimonial track containers */
+  .testimonial-track-outer {
+    overflow: visible !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 3rem !important;
+    min-height: 300px !important;
+  }
+  
+  .testimonial-track {
+    display: flex !important;
+    gap: 1rem !important;
+    width: 100% !important;
+    overflow: visible !important;
+    min-height: 300px !important;
+  }
+  
+  /* Fix testimonial cards for mobile */
+  .testimonial-card {
+    flex: 0 0 300px !important;
+    width: 300px !important;
+    min-width: 300px !important;
+    background: var(--bg-card) !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 2rem !important;
+    transition: all 0.3s ease !important;
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+    display: block !important;
+    height: auto !important;
+    min-height: 250px !important;
+  }
+  
+  /* Ensure testimonial content is visible */
+  .testimonial-card .stars {
+    display: flex !important;
+    gap: 3px !important;
+    margin-bottom: 1rem !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  .testimonial-card .stars svg {
+    width: 14px !important;
+    height: 14px !important;
+    fill: var(--red) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  .testimonial-card blockquote {
+    font-size: 0.9rem !important;
+    color: var(--gray-light) !important;
+    line-height: 1.6 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .testimonial-card .testimonial-author {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  .testimonial-card .testimonial-avatar {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    background: var(--red) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: white !important;
+    font-weight: bold !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  .testimonial-card .testimonial-name {
+    font-weight: 600 !important;
+    color: white !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  .testimonial-card .testimonial-role {
+    font-size: 0.8rem !important;
+    color: var(--gray) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  /* Fix testimonial animations for mobile */
+  .testimonial-card.reveal-up {
+    opacity: 0 !important;
+    transform: translateY(20px) !important;
+    transition: opacity 0.6s ease, transform 0.6s ease !important;
+  }
+  
+  .testimonial-card.reveal-up.in-view {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  
+  /* Speed up mobile testimonial slider */
+  @keyframes testimonialSlideMobile {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  /* If using CSS animation for mobile, speed it up */
+  .testimonial-track.autoplay-mobile {
+    animation: testimonialSlideMobile 15s linear infinite !important;
+  }
+  
+  /* Ensure testimonial section headings are visible */
+  .testimonials h2 {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+  
+  .testimonials .section-label {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+  
+  /* CTA section animations */
+  .cta-section h2 {
+    opacity: 0 !important;
+    transform: translateY(20px) !important;
+    transition: opacity 0.8s ease, transform 0.8s ease !important;
+    will-change: transform, opacity !important;
+  }
+  
+  .cta-section h2.reveal-up.in-view {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  
+  /* Button hover/tap feedback */
+  .btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  }
+  
+  .btn:active {
+    transform: scale(0.95) !important;
+    transition: transform 0.1s ease !important;
+  }
+  
+  /* Mobile menu animations */
+  .mobile-nav {
+    transition: opacity 0.3s ease, transform 0.3s ease !important;
+    will-change: transform, opacity !important;
+  }
+  
+  .mobile-nav.open {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  
+  /* Performance optimization */
+  @media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal-up,
+    .reveal-left,
+    .reveal-right,
+    .text-reveal span {
+      transition: none !important;
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
   }
   
   /* Clean spacing between major sections */
@@ -4495,12 +5203,18 @@ div::-webkit-scrollbar {
   }
   
   .menu-content a:hover {
+    color: var(--red);
+    opacity: 1;
+  }
+  
+  .menu-content a.active {
+    color: var(--red);
     opacity: 1;
   }
   
   .menu-content a:first-child {
-    color: #ff2c2c;
-    opacity: 1;
+    color: white;
+    opacity: 0.7;
   }
   
   /* Call Button */
@@ -4543,6 +5257,196 @@ div::-webkit-scrollbar {
   
   .close-btn:hover {
     background: rgba(255,255,255,0.1);
+  }
+}
+
+/* =====================================================
+   FOUNDERS SECTION
+   ===================================================== */
+
+.founders-section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.founders-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 4rem;
+}
+
+.founder-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.founder-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(229, 0, 0, 0.03), transparent);
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.founder-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 0 60px rgba(229, 0, 0, 0.1);
+}
+
+.founder-card:hover::before {
+  opacity: 1;
+}
+
+.founder-content {
+  position: relative;
+  z-index: 1;
+}
+
+.founder-name {
+  font-family: var(--font-headline);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.founder-role {
+  color: var(--red);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.founder-title {
+  color: var(--gray-light);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.founder-desc {
+  color: var(--gray);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.founder-divider {
+  width: 1px;
+  height: 120px;
+  background: linear-gradient(180deg, 
+    transparent, 
+    var(--red) 20%, 
+    var(--red) 80%, 
+    transparent
+  );
+  position: relative;
+  margin-top: 2rem;
+}
+
+.founder-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: var(--red);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--red);
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0%, 100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .founders-section {
+    padding: 4rem 1.5rem;
+  }
+  
+  .founders-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .founder-card {
+    padding: 2.5rem 2rem;
+  }
+  
+  .founder-name {
+    font-size: 2rem;
+  }
+  
+  .founder-title {
+    font-size: 1rem;
+  }
+  
+  .founder-desc {
+    font-size: 0.9rem;
+  }
+  
+  .founder-divider {
+    width: 60px;
+    height: 1px;
+    margin: 0 auto;
+  }
+  
+  .founder-divider::before {
+    animation: pulse-red 2s infinite;
+  }
+}
+
+/* Tablet Responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .founders-section {
+    padding: 5rem 2rem;
+  }
+  
+  .founders-grid {
+    gap: 2rem;
+  }
+  
+  .founder-card {
+    padding: 2.5rem 2rem;
+  }
+  
+  .founder-name {
+    font-size: 2.2rem;
   }
 }
 
